@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Mini</title>
+    <script src="https://kit.fontawesome.com/c0adbb8084.js" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Inter, sans-serif;
+        }
+
+        :root {
+            --color-dark: #282828;
+            --color-darker: #1d1d1d;
+        }
+
+        body {
+            background-color: var(--color-darker);
+            color: rgb(235, 238, 241);
+        }
+
+        #container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        #videoPlayer {
+            width: 100%;
+            aspect-ratio: 1.784;
+        }
+
+        #title {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <iframe id="videoPlayer" allow="fullscreen" frameborder="0"></iframe>
+        <h3 id="title"></h3>
+    </div>
+
+
+    <script src="./scripts/video.js"></script>
+</body>
+
+</html>

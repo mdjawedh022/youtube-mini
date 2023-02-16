@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+}
+
+:root {
+    --color-dark: #282828;
+    --color-darker: #1d1d1d;
+}
+body {
+    background-color: #1d1d1d;
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    box-sizing: border-box;
+    padding: 8px 20px;
+    background-color: var(--color-dark);
+    gap: 10px;
+    align-items: center;
+    border-bottom: 1px rgb(46, 46, 46) solid;
+}
+#navbar i {
+    cursor: pointer;
+    color: rgb(207, 207, 207);
+    font-size: 15px;
+}
+
+#navbar img {
+    height: 40px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#search {
+    border: 1px rgb(88, 88, 88) solid;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+}
+#search input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: rgb(217, 224, 228);
+    font-size: 16px;
+    background-color: var(--color-darker);
+    width: 100%;
+}
+
+#search i {
+    padding: 8px 20px;
+}
+
+#search + i {
+    margin-right: auto;
+    border-radius: 50px;
+    background-color: var(--color-darker);
+    padding: 10px 12px;
+}
+
+#navbar > i:nth-child(5),
+#navbar > i:nth-child(6) {
+    margin: 0 8px;
+}
+#navbar > #profile {
+    border-radius:140%;
+    height: 25px;
+    margin-right: 10px;
+}
+
+/* ======================== 
+ /* Spacer  */
+
+.space {
+    margin-top: 80px;
+}
+
+/* ========================
+ Container 
+==========================*/
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px 30px;
+    width: 94%;
+    margin: 15px auto 20px;
+}
+#container > div {
+    border: 1px rgb(90, 90, 90, 0) solid;
+    color: rgb(212, 223, 230);
+    border-radius: 4px;
+    padding: 4px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+#container > div:hover {
+    border: 1px rgb(90, 90, 90) solid;
+    box-shadow: rgb(46, 46, 46) 0 0 4px;
+}
+
+#container img {
+    width: 100%;
+    aspect-ratio: 1.785;
+    object-fit: cover;
+    border-radius: 2px;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+#container p {
+    margin: 4px;
+    font-size: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+#container > #channel_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#container > #channel_div img {
+    aspect-ratio: 1;
+    width: 55%;
+    border-radius: 50%;
+}
+#container > #channel_div img:hover {
+    box-shadow: rgb(48, 48, 48) 0 0 10px;
+}
+
+/* ====================
+ Filter
+======================*/
+#filter_container {
+    border: solid 0;
+    margin: 0 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-top: -15px;
+}
+#filter_container > h3 {
+    color: rgb(234, 238, 241);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 2px;
+}
+#filter_container > select {
+    background: transparent;
+    color: white;
+    border-radius: 5px;
+    padding: 7px 10px;
+}
+#filter_container option {
+    background: #1d1d1d;
+}
+/* ====================== 
+ Media Query
+========================*/
+
+@media all and (max-width: 870px) {
+    #container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media all and (max-width: 680px) {
+    #container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media all and (max-width: 500px) {
+    #container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

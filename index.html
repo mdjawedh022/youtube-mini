@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Mini</title>
+    <script src="https://kit.fontawesome.com/c0adbb8084.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+
+    <div id="navbar">
+        <i class="fa-solid fa-bars" id="menu"></i>
+        <img src="https://piunikaweb.com/wp-content/uploads/2020/11/new-youtube-logo.jpg" alt="YouTube logo">
+        <form id="search" onsubmit="Search(event)">
+            <input type="text" id="query" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass" onclick="Search(null)"></i>
+        </form>
+        <i class="fa-solid fa-microphone"></i>
+        <i class="fa-solid fa-video"></i>
+        <i class="fa-regular fa-bell"></i>
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            alt="My Photo" id="profile">
+    </div>
+    <div class="space"></div>
+    <div id="filter_container">
+        <h3>Filter</h3>
+        <select name="Filter" id="filter">
+            <option value="any">Any</option>
+            <option value="long">Long (more than 20 mins)</option>
+            <option value="medium">Medium (between 4 to 20 mins)</option>
+            <option value="short">Short (below 4 mins)</option>
+        </select>
+    </div>
+
+    <div id="container"></div>
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
